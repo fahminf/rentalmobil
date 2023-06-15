@@ -12,7 +12,7 @@ class Mobil extends Model
     protected $teble = "mobils";
 
     protected $fillable = [
-        'nama_mobl', 'cc', 'merk_id',
+        'nama_mobil', 'cc', 'merk_id',
         'tahun_mobil', 'warna', 'tipe_mobil_id',
         'foto', 'nomor_polisi'
     ];
