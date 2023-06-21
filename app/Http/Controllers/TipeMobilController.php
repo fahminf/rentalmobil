@@ -7,19 +7,16 @@ use App\Models\TipeMobil;
 
 class TipeMobilController extends Controller
 {
-    function index()
-    {
+    function index(){
         $merkData = TipeMobil::get();
-        return view('pages.tipe_mobil.index', ['merkData' => $merkData]);
+        return view('pages.tipe_mobil.index', ['merkData'=>$merkData]);
     }
 
-    function create()
-    {
+    function create(){
         return view('pages.tipe_mobil.create');
     }
 
-    function store(Request $request)
-    {
+    function store(Request $request) {
         $merkData = new TipeMobil;
         $merkData->tipe = $request->tipe;
         $merkData->save();
@@ -27,26 +24,25 @@ class TipeMobilController extends Controller
         return redirect('/tipe_mobil');
     }
 
-    function edit($id)
-    {
+    function edit($id){
         $merkData = TipeMobil::find($id);
-        return view('pages.tipe_mobil.edit', ['merkData' => $merkData]);
+       return view('pages.tipe_mobil.edit', ['merkData'=> $merkData]);
     }
 
-    function update($id, Request $request)
-    {
+    function update($id, Request $request){
         $merkData = TipeMobil::find($id);
         $merkData->tipe = $request->tipe;
         $merkData->save();
 
         return redirect()->to('/tipe_mobil')->with('success', 'data berhasil diupdate');
+
     }
 
-    function delete($id, Request $request)
-    {
+    function delete($id, Request $request){
         $merkData = TipeMobil::find($id);
         $merkData->delete();
 
         return redirect()->to('/tipe_mobil')->with('success', 'data berhasil dihapus');
+
     }
 }

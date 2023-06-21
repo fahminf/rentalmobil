@@ -16,7 +16,7 @@
                     <div class="form-group">
                         <label for="">Tipe Mobil</label>
                         <input type="text" class="form-control" name="tipe" required>
-                    </div>
+                    </div>55555554
                     <div class="form-group mt-3">
                         <button class="form-control btn btn-primary" type="submit">Simpan</button>
                     </div>

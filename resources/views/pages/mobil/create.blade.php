@@ -18,7 +18,7 @@
                         <input type="text" class="form-control" name="nama_mobil" required>
                     </div>
                     <div class="form-group">
-                        <label for="">CC</label>
+                        <label for="">cc</label>
                         <input type="text" class="form-control" name="cc" required>
                     </div>
                     <div class="form-group">
@@ -26,7 +26,7 @@
                         <input type="text" class="form-control" name="tahun_mobil" required>
                     </div>
                     <div class="form-group">
-                        <label for="">Nomor Polisi</label>
+                        <label for="">Nomor polisi</label>
                         <input type="text" class="form-control" name="nomor_polisi" required>
                     </div>
                     <div class="form-group">
@@ -38,7 +38,7 @@
                         <input type="file" class="form-control" name="foto" required>
                     </div>
                     <div class="form-group">
-                        <label for="">merk Mobil</label>
+                        <label for="">Merk</label>
                         <select name="merk_id" class="form-control">
                             @foreach ($merkData as $merk)
                                 <option value="{{ $merk->id }}">{{ $merk->merk }}</option>
@@ -46,7 +46,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="">tipe Mobil</label>
+                        <label for="">Tipe</label>
                         <select name="tipe_mobil_id" class="form-control">
                             @foreach ($tipeMobilData as $tipe)
                                 <option value="{{ $tipe->id }}">{{ $tipe->tipe }}</option>

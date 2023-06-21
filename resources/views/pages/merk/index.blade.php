@@ -27,7 +27,7 @@
                                     <td>{{ $merk->merk }}</td>
                                     <td>
                                         <a href="/merk/edit/{{ $merk->id }}" class="btn btn-warning">Edit</a>
-                                        <a href="/merk/delete/{{ $merk->id }}" class="btn btn-danger">Hapus</a>
+                                        <a href="/merk/delete/{{ $merk->id }}" class="btn btn-danger">Delete</a>
                                     </td>
                                 </tr>
                             @endforeach

@@ -1,11 +1,11 @@
-'@extends('template.master')
+@extends('template.master')
 
 @section('content')
     <div class="container-fluid px-4">
         <h1 class="mt-4">Tipe Mobil</h1>
         <div class="d-flex justify-content-between mb-3">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item active">Data T'ipe Mobil</li>
+                <li class="breadcrumb-item active">Data Tipe Mobil</li>
             </ol>
             <a href="/tipe_mobil/create" class="btn btn-primary">Tambah Data</a>
         </div>

@@ -9,7 +9,7 @@ class Merk extends Model
 {
     use HasFactory;
 
-    protected $table = "merks";
+    protected $table = 'merks';
 
     protected $fillable = [
         'merk'

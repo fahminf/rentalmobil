@@ -15,7 +15,7 @@
                     @csrf
                     <div class="form-group">
                         <label for="">Merk Mobil</label>
-                        <input type="text" value="{{ $merkData->merk }}" class="form-control" name="merk" required>
+                        <input type="text" class="form-control" name="merk" value="{{ $merkData->merk }}" required>
                     </div>
                     <div class="form-group mt-3">
                         <button class="form-control btn btn-primary" type="submit">Simpan</button>

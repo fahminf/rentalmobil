@@ -7,46 +7,41 @@ use App\Models\Merk;
 
 class MerkController extends Controller
 {
-    function index()
-    {
+    function index(){
         $merkData = Merk::get();
-        return view('pages.merk.index', ['merkData' => $merkData]);
+        return view('pages.merk.index',
+        ['merkData' => $merkData]);
     }
 
-    function create()
-    {
+    function create(){
         return view('pages.merk.create');
     }
 
-    function store(Request $request)
-    {
+    function store(Request $request){
         $merkData = new Merk;
         $merkData->merk = $request->merk;
         $merkData->save();
 
-        return redirect()->to('/merk')->with('success', 'Data berhasil disimpan');
+        return redirect()->to('/merk')->with('success','Data berhasil disimpan');
     }
 
-    function edit($id)
-    {
+    function edit($id){
         $merkData = Merk::find($id);
-        return view('pages.merk.edit', ['merkData' => $merkData]);
+        return view('pages.merk.edit',['merkData'=> $merkData]);
     }
 
-    function update($id, Request $request)
-    {
+    function update($id,Request $request){
         $merkData = Merk::find($id);
         $merkData->merk = $request->merk;
         $merkData->save();
 
-        return redirect()->to('/merk')->with('succses', 'Data berhasil diupdate');
+        return redirect()->to('/merk')->with('success','data berhasil diupdate');
     }
 
-    function delete($id)
-    {
+    function delete($id){
         $merkData = Merk::find($id);
         $merkData->delete();
 
-        return redirect()->to('/merk')->with('succses', 'Data merk berhasil dihapus');
+        return redirect()->to('/merk')->with('success','data merk berhasil dihapus');
     }
 }

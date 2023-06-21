@@ -7,7 +7,7 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item active">Data Mobil</li>
             </ol>
-            <a href="/mobil/create" class="btn btn-primary">Tambah Data</a>
+            <a href="/mobil/create" class="btn btn-primary">Tambah Data Mobil</a>
         </div>
         <div class="card shadow">
             <div class="card-body">
@@ -16,16 +16,15 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Nama Mobil</th>
+                                <th>Nama mobil</th>
                                 <th>Merk</th>
                                 <th>cc</th>
-                                <th>tahun mobil</th>
-                                <th>nomor polisi</th>
-                                <th>warna</th>
-                                <th>tipe mobil</th>
-                                <th>foto</th>
+                                <th>Tahun mobil</th>
+                                <th>Nomor polisi</th>
+                                <th>Warna</th>
+                                <th>Tipe mobil</th>
+                                <th>Foto</th>
                                 <th>Action</th>
-
                             </tr>
                         </thead>
                         <tbody>
@@ -40,7 +39,10 @@
                                     <td>{{ $mobil->warna }}</td>
                                     <td>{{ $mobil->tipe_mobil_id }}</td>
                                     <td>{{ $mobil->foto }}</td>
-                                    <td></td>
+                                    <td>
+                                        <a href="/mobil/edit/{{ $mobil->id }}" class="btn btn-warning">Edit</a>
+                                        <a href="/mobil/delete/{{ $mobil->id }}" class="btn btn-danger">Delete</a>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
